@@ -104,6 +104,7 @@
   object-position: bottom;
   max-height: 10vw;
   width: 100%;
+  transform: translateY(2px);
 }
 
 section {
@@ -159,6 +160,11 @@ mat-nav-list.tel-list {
     width: 40px;
     height: 40px;
   }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .transport {
@@ -181,6 +187,28 @@ mat-nav-list.tel-list {
     }
 
     text-decoration: none !important;
+  }
+}
+
+.social-program {
+  a.styled {
+    border: rgba(255, 255, 255, 0.15) 1px solid;
+    border-radius: 6px;
+    padding: 8px;
+    @include mat-elevation-transition();
+    transition: background-color 0.28s ease;
+
+    &:hover {
+      @include mat-elevation(6);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.partners {
+  img {
+    height: 100px;
+    margin-bottom: 1rem;
   }
 }
 

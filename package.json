@@ -56,7 +56,7 @@
     "@ngxs/store": "^3.6.2",
     "firebase": "^7.15.5",
     "jspdf": "^1.5.3",
-    "lodash": "^4.17.17",
+    "lodash": "^4.17.19",
     "moment": "^2.27.0",
     "ngx-markdown": "^10.0.0",
     "parallax-js": "^3.1.0",

@@ -41,7 +41,7 @@ jobs:
         # Build and test the project, then
         # deploy to Azure Web App.
         yarn install
-        yarn build --if-present
+        yarn run build
 #        yarn test --if-present
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2

@@ -51,13 +51,11 @@ jobs:
         restore-keys: |
          ${{ runner.os }}-yarn-
          
-    - name: npm install, build, and test
-      run: |
-        # Build and test the project, then
-        # deploy to Azure Web App.
-        yarn install
-        yarn build
-#        yarn test --if-present
+    - name: Install dependencies
+      run: yarn install
+      
+    - name: Build app
+      run: yarn build
 
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2

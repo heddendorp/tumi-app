@@ -15,10 +15,13 @@ name: Lint Code Base
 #############################
 on:
   push:
-    branches-ignore: [v2]
+#    branches-ignore: [v2]
     # Remove the line above to run when pushing to master
   pull_request:
     branches: [v2]
+    
+env:
+  NODE_VERSION: '14.x'
 
 ###############
 # Set the Job #
@@ -43,9 +46,11 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
-      - uses: actions/setup-node@v2
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: ${{ env.NODE_VERSION }}
+          
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"

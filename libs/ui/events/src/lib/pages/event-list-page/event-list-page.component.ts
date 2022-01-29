@@ -35,7 +35,7 @@ export class EventListPageComponent implements OnDestroy {
       map(({ data }) => data.events)
     );
     this.eventsAfter.valueChanges
-      .pipe(takeUntil(this.destroy$), )
+      .pipe(takeUntil(this.destroy$))
       .subscribe((value) =>
         this.loadEventsQueryRef.refetch({
           after: value.toJSDate(),
@@ -62,7 +62,7 @@ export class EventListPageComponent implements OnDestroy {
     this.loadEventsQueryRef.startPolling(10000);
   }
 
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.loadEventsQueryRef.stopPolling();
     this.destroy$.next(true);
     this.destroy$.complete();

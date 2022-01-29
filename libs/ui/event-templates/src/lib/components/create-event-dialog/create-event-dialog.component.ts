@@ -84,7 +84,7 @@ export class CreateEventDialogComponent implements OnInit, OnDestroy {
       });
   }
 
-  onSubmit(): void  {
+  onSubmit(): void {
     if (this.eventDataForm.valid) {
       const data = this.eventDataForm.value;
       this.dialog.close({
@@ -93,8 +93,6 @@ export class CreateEventDialogComponent implements OnInit, OnDestroy {
         end: new Date(data.end),
       });
     } else {
-      
-      
     }
   }
 

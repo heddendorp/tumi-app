@@ -51,7 +51,7 @@ export class EventPhotoPageComponent implements OnDestroy {
         this.loadPhotosRef.refetch({ eventId: params.get('eventId') ?? '' })
       );
   }
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.destroyed$.next(true);
     this.destroyed$.complete();
   }
@@ -97,7 +97,7 @@ export class EventPhotoPageComponent implements OnDestroy {
       const files = Array.from(target.files).filter((file) =>
         file.type.startsWith('image/')
       );
-      
+
       const { data } = await firstValueFrom(this.getShareKey.fetch());
       const uploads = new BehaviorSubject(files.map(() => 0));
       uploads.subscribe((progress) => {
@@ -161,7 +161,7 @@ export class EventPhotoPageComponent implements OnDestroy {
     }
   }
 
-  openPhoto(photo: unknown): void  {
+  openPhoto(photo: unknown): void {
     this.dialog.open(PhotoDetailsDialogComponent, {
       data: { photo },
       maxHeight: '95vh',

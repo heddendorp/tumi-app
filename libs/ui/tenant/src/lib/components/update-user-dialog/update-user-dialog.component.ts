@@ -31,13 +31,11 @@ export class UpdateUserDialogComponent implements OnInit {
       role: this.data.user.currentTenant?.role,
       status: this.data.user.currentTenant?.status,
     });
-    
-    
   }
 
   ngOnInit(): void {}
 
-  onSubmit(): void  {
+  onSubmit(): void {
     if (this.updateForm.valid) {
       this.dialog.close(this.updateForm.value);
     }

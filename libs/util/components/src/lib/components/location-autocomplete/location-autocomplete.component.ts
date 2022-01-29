@@ -45,7 +45,6 @@ export class LocationAutocompleteComponent implements ControlValueAccessor {
   }
 
   private loadLocationOptions(value: string | atlas.Models.SearchFuzzyResult) {
-    
     if (!value || typeof value !== 'string') {
       return from([[]]);
     }

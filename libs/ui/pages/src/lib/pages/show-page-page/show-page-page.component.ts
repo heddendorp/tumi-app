@@ -20,8 +20,7 @@ export class ShowPagePageComponent {
     ]).pipe(
       map(([params, res]) => {
         const page = params.get('page');
-        
-        
+
         if (!page || !res.data.currentTenant) {
           return `## Page not found`;
         }

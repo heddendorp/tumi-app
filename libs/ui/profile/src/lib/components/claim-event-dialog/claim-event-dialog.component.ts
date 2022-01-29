@@ -85,7 +85,7 @@ export class ClaimEventDialogComponent {
           price: this.priceControl.value,
         })
       );
-      
+
       if (data && stripe) {
         stripe.redirectToCheckout({
           sessionId:

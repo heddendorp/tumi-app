@@ -54,7 +54,6 @@ export class TenantEditPageComponent {
         })
         .toPromise();
     } else {
-      
     }
   }
 }

@@ -41,7 +41,7 @@ export class CheckRegistrationTimeComponent implements OnChanges {
     );
   }
 
-  ngOnChanges(changes: SimpleChanges): void  {
+  ngOnChanges(changes: SimpleChanges): void {
     if (changes.event) {
       this.registrationStart$.next(
         DateTime.fromISO(changes.event.currentValue.registrationStart)

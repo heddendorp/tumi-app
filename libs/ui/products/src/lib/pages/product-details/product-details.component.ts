@@ -34,7 +34,7 @@ export class ProductDetailsComponent implements OnDestroy {
       this.loadProductRef.refetch({ id: params.get('productId') ?? '' });
     });
   }
-  openPhoto(photo: unknown): void  {
+  openPhoto(photo: unknown): void {
     this.dialog.open(PhotoDetailsDialogComponent, {
       data: { photo },
       maxHeight: '95vh',
@@ -42,7 +42,7 @@ export class ProductDetailsComponent implements OnDestroy {
       panelClass: 'photo-view',
     });
   }
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.destroyed$.next(true);
     this.destroyed$.complete();
   }

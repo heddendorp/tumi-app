@@ -8,9 +8,8 @@ describe('BasketOverviewPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BasketOverviewPageComponent ]
-    })
-    .compileComponents();
+      declarations: [BasketOverviewPageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -23,7 +23,7 @@ export class NewOrganizerDialogComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(): void  {
+  onSubmit(): void {
     if (this.newOrganizerForm.valid) {
       this.dialog.close(this.newOrganizerForm.value);
     }

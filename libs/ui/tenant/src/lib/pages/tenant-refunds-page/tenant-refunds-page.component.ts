@@ -29,7 +29,7 @@ export class TenantRefundsPageComponent implements OnDestroy {
     );
   }
 
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.refundsQueryRef.stopPolling();
   }
 }

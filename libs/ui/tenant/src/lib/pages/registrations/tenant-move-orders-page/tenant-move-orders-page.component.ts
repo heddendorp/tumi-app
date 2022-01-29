@@ -38,7 +38,7 @@ export class TenantMoveOrdersPageComponent implements OnDestroy {
     );
   }
 
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.ordersQueryRef.stopPolling();
   }
 }

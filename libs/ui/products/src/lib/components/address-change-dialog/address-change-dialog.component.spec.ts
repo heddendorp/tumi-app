@@ -8,9 +8,8 @@ describe('AddressChangeDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddressChangeDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [AddressChangeDialogComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

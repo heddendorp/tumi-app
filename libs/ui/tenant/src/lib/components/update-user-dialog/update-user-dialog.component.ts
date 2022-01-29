@@ -37,7 +37,7 @@ export class UpdateUserDialogComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(): void  {
+  onSubmit(): void {
     if (this.updateForm.valid) {
       this.dialog.close(this.updateForm.value);
     }

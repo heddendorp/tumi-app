@@ -22,7 +22,7 @@ export class TenantStatsPageComponent implements OnDestroy {
     );
   }
 
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.getStatisticsRef.stopPolling();
   }
 }

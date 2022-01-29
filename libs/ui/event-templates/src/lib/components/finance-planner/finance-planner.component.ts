@@ -74,7 +74,7 @@ export class FinancePlannerComponent implements OnChanges {
     );
   }
 
-  ngOnChanges(changes: SimpleChanges): void  {
+  ngOnChanges(changes: SimpleChanges): void {
     if (changes.template && changes.template.firstChange) {
       this.items$.next(changes.template.currentValue.finances.items);
     }

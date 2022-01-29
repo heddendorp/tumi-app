@@ -75,7 +75,7 @@
       <p class="">Certificate found!</p>
     </div>
     <div class="my-4 space-y-4">
-      <p class="text-lg">{{certificate.name}}</p>
+      <p class="text-lg">{{ certificate.name }}</p>
       <ng-container *ngIf="certificate.vaccination">
         <p class="text-lg">Vaccination</p>
         <p>
@@ -114,7 +114,9 @@
         </p>
       </ng-container>
     </div>
-    <button mat-flat-button color="primary" (click)="showScanner()">Show QR scanner</button>
+    <button mat-flat-button color="primary" (click)="showScanner()">
+      Show QR scanner
+    </button>
   </ng-container>
 </mat-dialog-content>
 <mat-dialog-actions fxFlexAlign="end">

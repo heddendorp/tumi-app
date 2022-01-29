@@ -1,28 +1,28 @@
-query loadUserBasket{
-  currentUser{
+query loadUserBasket {
+  currentUser {
     id
-    currentTenant{
+    currentTenant {
       tenantId
       userId
-      cart{
+      cart {
         id
-        items{
+        items {
           id
           cost
           quantity
-          submissions{
+          submissions {
             id
             data
-            submissionItem{
+            submissionItem {
               id
               name
             }
           }
-          product{
+          product {
             id
             title
             description
-            leadImage{
+            leadImage {
               id
               src
             }
@@ -33,34 +33,34 @@ query loadUserBasket{
   }
 }
 
-query loadPurchases{
-  purchases(limitToOwn: true){
+query loadPurchases {
+  purchases(limitToOwn: true) {
     id
     createdAt
     status
-    items{
+    items {
       id
       cost
       quantity
-      submissions{
+      submissions {
         id
         data
-        submissionItem{
+        submissionItem {
           id
           name
         }
       }
-      product{
+      product {
         id
         title
         description
-        leadImage{
+        leadImage {
           id
           src
         }
       }
     }
-    payment{
+    payment {
       id
       status
       checkoutSession
@@ -68,31 +68,31 @@ query loadPurchases{
   }
 }
 
-mutation createPurchaseFromCart{
-  createPurchaseFromCart{
+mutation createPurchaseFromCart {
+  createPurchaseFromCart {
     id
-    payment{
+    payment {
       id
       status
       checkoutSession
     }
-    items{
+    items {
       id
       cost
       quantity
-      submissions{
+      submissions {
         id
         data
-        submissionItem{
+        submissionItem {
           id
           name
         }
       }
-      product{
+      product {
         id
         title
         description
-        leadImage{
+        leadImage {
           id
           src
         }
@@ -101,22 +101,22 @@ mutation createPurchaseFromCart{
   }
 }
 
-mutation increaseItemQuantity($id: ID!){
-increaseLineItemQuantity(id: $id){
-  id
-  quantity
-}
-}
-
-mutation decreaseItemQuantity($id: ID!){
-  decreaseLineItemQuantity(id: $id){
-  id
-  quantity
-}
+mutation increaseItemQuantity($id: ID!) {
+  increaseLineItemQuantity(id: $id) {
+    id
+    quantity
+  }
 }
 
-mutation deleteLineItem($id: ID!){
-  deleteLineItem(id: $id){
-  id
+mutation decreaseItemQuantity($id: ID!) {
+  decreaseLineItemQuantity(id: $id) {
+    id
+    quantity
+  }
 }
+
+mutation deleteLineItem($id: ID!) {
+  deleteLineItem(id: $id) {
+    id
+  }
 }

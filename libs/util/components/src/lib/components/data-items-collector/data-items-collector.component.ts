@@ -30,7 +30,7 @@ export class DataItemsCollectorComponent implements OnDestroy, OnChanges {
   public SubmissionItemType = SubmissionItemType;
   private destroyed = new Subject();
   constructor(private fb: FormBuilder, private snackBar: MatSnackBar) {}
-  ngOnChanges(changes: SimpleChanges): void  {
+  ngOnChanges(changes: SimpleChanges): void {
     if (changes.items) {
       this.form = this.fb.group(
         changes.items.currentValue.reduce(
@@ -48,7 +48,7 @@ export class DataItemsCollectorComponent implements OnDestroy, OnChanges {
     this.destroyed.complete();
   }
 
-  submitData(): void  {
+  submitData(): void {
     if (this.form?.valid) {
       this.dataSubmission.emit(this.form.value);
     } else {

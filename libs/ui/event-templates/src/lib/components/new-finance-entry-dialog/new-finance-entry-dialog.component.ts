@@ -28,7 +28,7 @@ export class NewFinanceEntryDialogComponent implements OnDestroy, OnInit {
     });
   }
 
-  ngOnInit(): void  {
+  ngOnInit(): void {
     this.expenseForm.get('scale')?.disable();
     this.expenseForm
       .get('type')
@@ -42,7 +42,7 @@ export class NewFinanceEntryDialogComponent implements OnDestroy, OnInit {
       });
   }
 
-  ngOnDestroy(): void  {
+  ngOnDestroy(): void {
     this.destroyed$.next(true);
     this.destroyed$.complete();
   }

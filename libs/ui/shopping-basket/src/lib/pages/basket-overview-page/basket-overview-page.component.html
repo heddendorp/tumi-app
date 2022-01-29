@@ -41,15 +41,7 @@
         <ng-container *ngIf="item.quantity > 1; else delete">
           <div
             (click)="decreaseQuantity(item.id)"
-            class="
-              px-4
-              py-1
-              cursor-pointer
-              border border-outline-default
-              bg-variant-default
-              text-variant-on
-              rounded-l-full
-            "
+            class="px-4 py-1 cursor-pointer border border-outline-default bg-variant-default text-variant-on rounded-l-full"
           >
             -
           </div>
@@ -57,41 +49,19 @@
         <ng-template #delete>
           <div
             (click)="removeItem(item.id)"
-            class="
-              px-4
-              py-1
-              cursor-pointer
-              border border-outline-default
-              bg-variant-default
-              text-variant-on
-              rounded-l-full
-            "
+            class="px-4 py-1 cursor-pointer border border-outline-default bg-variant-default text-variant-on rounded-l-full"
           >
             ❌
           </div>
         </ng-template>
         <div
-          class="
-            px-4
-            py-1
-            border-t border-b border-outline-default
-            bg-surface-default
-            text-surface-on
-          "
+          class="px-4 py-1 border-t border-b border-outline-default bg-surface-default text-surface-on"
         >
           {{ item.quantity }}
         </div>
         <div
           (click)="increaseQuantity(item.id)"
-          class="
-            px-4
-            py-1
-            cursor-pointer
-            border border-outline-default
-            bg-variant-default
-            text-variant-on
-            rounded-r-full
-          "
+          class="px-4 py-1 cursor-pointer border border-outline-default bg-variant-default text-variant-on rounded-r-full"
         >
           +
         </div>

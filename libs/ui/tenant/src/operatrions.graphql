@@ -166,18 +166,18 @@ query getLogs {
   }
 }
 
-query getTenantPurchases{
-  purchases(limitToOwn: false){
+query getTenantPurchases {
+  purchases(limitToOwn: false) {
     id
     createdAt
     status
-    user{
+    user {
       id
       email
       fullName
       university
     }
-    payment{
+    payment {
       id
       status
       amount
@@ -185,19 +185,19 @@ query getTenantPurchases{
   }
 }
 
-query getPurchase($id: ID!){
-  purchase(id: $id){
+query getPurchase($id: ID!) {
+  purchase(id: $id) {
     id
     status
     createdAt
     status
-    user{
+    user {
       id
       email
       fullName
       university
     }
-    payment{
+    payment {
       id
       status
       paymentMethodType
@@ -207,21 +207,21 @@ query getPurchase($id: ID!){
       netAmount
       feeAmount
     }
-    items{
+    items {
       id
       quantity
-      product{
+      product {
         id
         title
-        leadImage{
+        leadImage {
           id
           src
         }
       }
-      submissions{
+      submissions {
         id
         data
-        submissionItem{
+        submissionItem {
           id
           name
         }

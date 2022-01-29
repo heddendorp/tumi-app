@@ -8,9 +8,8 @@ describe('ShippingLabelsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShippingLabelsPageComponent ]
-    })
-    .compileComponents();
+      declarations: [ShippingLabelsPageComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

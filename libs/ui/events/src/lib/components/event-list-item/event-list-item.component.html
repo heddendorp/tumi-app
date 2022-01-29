@@ -5,29 +5,13 @@
   class="h-full relative text-surface-on"
 >
   <div
-    class="
-      bg-green-500
-      text-sm text-white
-      px-2
-      rounded-bl rounded-tr-2xl
-      absolute
-      top-0
-      right-0
-    "
+    class="bg-green-500 text-sm text-white px-2 rounded-bl rounded-tr-2xl absolute top-0 right-0"
     *ngIf="event.userRegistered"
   >
     registered
   </div>
   <div
-    class="
-      bg-secondary-default
-      text-sm text-secondary-on
-      px-2
-      rounded-bl rounded-tr-2xl
-      absolute
-      top-0
-      right-0
-    "
+    class="bg-secondary-default text-sm text-secondary-on px-2 rounded-bl rounded-tr-2xl absolute top-0 right-0"
     *ngIf="event.userIsOrganizer"
   >
     organizer
@@ -47,14 +31,7 @@
     <img [src]="event.icon | iconURL" alt="" class="w-28" />
   </div>
   <div
-    class="
-      bg-surface-default
-      rounded-2xl
-      p-4
-      -ml-16
-      w-full
-      border border-outline-default
-    "
+    class="bg-surface-default rounded-2xl p-4 -ml-16 w-full border border-outline-default"
   >
     <p class="font-bold mb-2">{{ event.title }}</p>
     <p>Starts: {{ event.start | date: 'shortTime' }}</p>

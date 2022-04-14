@@ -1,5 +1,9 @@
 # ESN (TUMi) App
 
+----
+# This project is continued at https://github.com/heddendorp/tumi
+----
+
 A modern PWA to manage the events and members of an ESN secion
 
 ## Demo
